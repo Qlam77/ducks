@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (string file in ViewBag.files)
+{
+    <div>@Html.ActionLink(file + ".txt", "Display", "Files", new { id = file }, null)</div>
+}
